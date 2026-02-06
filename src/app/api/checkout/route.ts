@@ -6,6 +6,8 @@ const stripe = new Stripe(stripeSecretKey || "dummy_key", {
   apiVersion: "2026-01-28.clover",
 });
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   try {
     const { size } = await request.json();

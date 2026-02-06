@@ -7,7 +7,9 @@ const stripe = new Stripe(stripeSecretKey || "dummy_key", {
   apiVersion: "2026-01-28.clover",
 });
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || "dummy_key");
+
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   const body = await request.text();
