@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "UNRULY HUMAN | Alloy 000 Bomber Jacket",
   description:
     "Wearable art from artist Ethan S. Brewerton. The Alloy 000 Bomber Jacket features hand-drawn biomechanical patterns, premium materials, and is manufactured in England. Limited edition.",
+  icons: {
+    icon: "/favicon.png",
+  },
   keywords: [
     "bomber jacket",
     "wearable art",
