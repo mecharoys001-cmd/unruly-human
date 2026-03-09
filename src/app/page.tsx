@@ -424,14 +424,14 @@ export default function Home() {
                 SIZE GUIDE
               </h3>
 
-              {/* Measurement Guide - images stacked with zero spacing */}
-              <div className="mb-0 leading-[0]">
+              {/* Measurement Guide - images with 30px spacing */}
+              <div className="mb-0">
                 <Image
                   src="/measurement-guide-1.png"
                   alt="How to measure chest and length"
                   width={468}
                   height={624}
-                  className="w-full h-auto block max-h-[40vh] object-contain"
+                  className="w-full h-auto block max-h-[40vh] object-contain mb-[30px]"
                   priority
                 />
                 <Image
