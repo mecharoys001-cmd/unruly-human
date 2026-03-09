@@ -210,7 +210,7 @@ export default function Home() {
             <ul className="space-y-4 text-white/60">
               <li className="flex items-center gap-4">
                 <span className="w-8 h-px bg-white/30" />
-                Premium satin lining
+                Quilted Jersey lining
               </li>
               <li className="flex items-center gap-4">
                 <span className="w-8 h-px bg-white/30" />
