@@ -424,11 +424,8 @@ export default function Home() {
                 SIZE GUIDE
               </h3>
 
-              {/* How to Measure Section */}
+              {/* Measurement Guide - no spacing between images */}
               <div className="mb-0">
-                <h4 className="text-lg font-light tracking-wide mb-4 text-center text-gray-700">
-                  HOW TO MEASURE
-                </h4>
                 <div className="relative w-full aspect-[3/4] border border-gray-200">
                   <Image
                     src="/measurement-guide-1.png"
@@ -438,13 +435,6 @@ export default function Home() {
                     priority
                   />
                 </div>
-              </div>
-
-              {/* Size Chart */}
-              <div className="mb-6">
-                <h4 className="text-lg font-light tracking-wide mb-4 text-center text-gray-700">
-                  SIZE CHART
-                </h4>
                 <div className="relative w-full aspect-[468/854] max-h-[60vh]">
                   <Image
                     src="/size-guide.png"
