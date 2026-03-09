@@ -431,7 +431,7 @@ export default function Home() {
                   alt="How to measure chest and length"
                   width={468}
                   height={624}
-                  className="w-full h-auto block"
+                  className="w-full h-auto block max-h-[40vh] object-contain"
                   priority
                 />
                 <Image
@@ -439,7 +439,7 @@ export default function Home() {
                   alt="Size Guide - Men's and Women's measurements for Chest, Waist, and Sleeve Length"
                   width={468}
                   height={854}
-                  className="w-full h-auto block"
+                  className="w-full h-auto block max-h-[50vh] object-contain"
                   priority
                 />
               </div>
