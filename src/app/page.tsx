@@ -424,26 +424,24 @@ export default function Home() {
                 SIZE GUIDE
               </h3>
 
-              {/* Measurement Guide - no spacing between images */}
-              <div className="mb-0">
-                <div className="relative w-full aspect-[3/4] leading-none mb-0">
-                  <Image
-                    src="/measurement-guide-1.png"
-                    alt="How to measure chest and length"
-                    fill
-                    className="object-contain block"
-                    priority
-                  />
-                </div>
-                <div className="relative w-full aspect-[468/854] max-h-[60vh] leading-none -mt-8">
-                  <Image
-                    src="/size-guide.png"
-                    alt="Size Guide - Men's and Women's measurements for Chest, Waist, and Sleeve Length"
-                    fill
-                    className="object-contain block"
-                    priority
-                  />
-                </div>
+              {/* Measurement Guide - images stacked with zero spacing */}
+              <div className="mb-0 leading-[0]">
+                <Image
+                  src="/measurement-guide-1.png"
+                  alt="How to measure chest and length"
+                  width={468}
+                  height={624}
+                  className="w-full h-auto block"
+                  priority
+                />
+                <Image
+                  src="/size-guide.png"
+                  alt="Size Guide - Men's and Women's measurements for Chest, Waist, and Sleeve Length"
+                  width={468}
+                  height={854}
+                  className="w-full h-auto block"
+                  priority
+                />
               </div>
 
               {/* Helper text */}
