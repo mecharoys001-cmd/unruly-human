@@ -317,7 +317,7 @@ export default function Home() {
             {/* Size Guide Link - Moved below Purchase button */}
             <button
               onClick={() => setShowSizeGuide(true)}
-              className="text-sm tracking-[0.2em] text-white/50 hover:text-white transition-colors mt-6 underline underline-offset-4"
+              className="w-full text-sm tracking-[0.2em] text-white/50 hover:text-white transition-colors mt-10 underline underline-offset-4"
             >
               VIEW SIZE GUIDE
             </button>
@@ -409,51 +409,40 @@ export default function Home() {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full bg-black/50 border border-white/20 p-6 md:p-8 cursor-default my-8"
+              className="relative max-w-4xl w-full bg-white border border-gray-200 p-6 md:p-8 cursor-default my-8"
             >
               {/* Close button */}
               <button
                 onClick={() => setShowSizeGuide(false)}
-                className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors text-2xl leading-none z-10"
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors text-2xl leading-none z-10"
               >
                 ×
               </button>
 
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-extralight tracking-wide mb-8 text-center">
+              <h3 className="text-2xl md:text-3xl font-extralight tracking-wide mb-8 text-center text-gray-900">
                 SIZE GUIDE
               </h3>
 
               {/* How to Measure Section */}
               <div className="mb-8">
-                <h4 className="text-lg font-light tracking-wide mb-4 text-center text-white/80">
+                <h4 className="text-lg font-light tracking-wide mb-4 text-center text-gray-700">
                   HOW TO MEASURE
                 </h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="relative w-full aspect-[3/4] border border-white/10">
-                    <Image
-                      src="/measurement-guide-1.png"
-                      alt="How to measure chest and length - measurement guide 1"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
-                  <div className="relative w-full aspect-[3/4] border border-white/10">
-                    <Image
-                      src="/measurement-guide-2.png"
-                      alt="How to measure jacket properly - measurement guide 2"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
+                <div className="relative w-full aspect-[3/4] border border-gray-200">
+                  <Image
+                    src="/measurement-guide-1.png"
+                    alt="How to measure chest and length"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
 
               {/* Size Chart */}
               <div className="mb-6">
-                <h4 className="text-lg font-light tracking-wide mb-4 text-center text-white/80">
+                <h4 className="text-lg font-light tracking-wide mb-4 text-center text-gray-700">
                   SIZE CHART
                 </h4>
                 <div className="relative w-full aspect-[468/854] max-h-[60vh]">
@@ -468,7 +457,7 @@ export default function Home() {
               </div>
 
               {/* Helper text */}
-              <p className="text-center text-sm text-white/50 tracking-wide">
+              <p className="text-center text-sm text-gray-500 tracking-wide">
                 Measurements are in inches. For best fit, measure a jacket you already own.
               </p>
             </motion.div>
