@@ -17,6 +17,7 @@ export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState("M");
   const [isLoading, setIsLoading] = useState(false);
+  const [showSizeGuide, setShowSizeGuide] = useState(false);
 
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
@@ -277,7 +278,7 @@ export default function Home() {
             <p className="text-white/50 mb-8">Free shipping worldwide</p>
 
             {/* Size Selector */}
-            <div className="flex justify-center gap-3 mb-12">
+            <div className="flex justify-center gap-3 mb-4">
               {["S", "M", "L", "XL", "XXL"].map((size) => (
                 <button
                   key={size}
@@ -292,6 +293,14 @@ export default function Home() {
                 </button>
               ))}
             </div>
+
+            {/* Size Guide Link */}
+            <button
+              onClick={() => setShowSizeGuide(true)}
+              className="text-sm tracking-[0.2em] text-white/50 hover:text-white transition-colors mb-12 underline underline-offset-4"
+            >
+              VIEW SIZE GUIDE
+            </button>
 
             <motion.button
               onClick={handleCheckout}
@@ -383,6 +392,57 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Size Guide Modal */}
+      <AnimatePresence>
+        {showSizeGuide && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowSizeGuide(false)}
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 cursor-pointer"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-2xl w-full bg-black/50 border border-white/20 p-6 md:p-8 cursor-default"
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setShowSizeGuide(false)}
+                className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors text-2xl leading-none"
+              >
+                ×
+              </button>
+
+              {/* Title */}
+              <h3 className="text-2xl md:text-3xl font-extralight tracking-wide mb-6 text-center">
+                SIZE GUIDE
+              </h3>
+
+              {/* Size chart image */}
+              <div className="relative w-full aspect-[468/854] max-h-[70vh]">
+                <Image
+                  src="/size-guide.png"
+                  alt="Size Guide - Men's and Women's measurements for Chest, Waist, and Sleeve Length"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+
+              {/* Helper text */}
+              <p className="text-center text-sm text-white/50 mt-6 tracking-wide">
+                Measurements are in inches. For best fit, measure a jacket you already own.
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
