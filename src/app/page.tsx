@@ -425,7 +425,7 @@ export default function Home() {
               </h3>
 
               {/* How to Measure Section */}
-              <div className="mb-8">
+              <div className="mb-4">
                 <h4 className="text-lg font-light tracking-wide mb-4 text-center text-gray-700">
                   HOW TO MEASURE
                 </h4>
