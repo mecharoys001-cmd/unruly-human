@@ -425,8 +425,8 @@ export default function Home() {
               </h3>
 
               {/* Measurement Guide - no spacing between images */}
-              <div className="flex flex-col gap-0 mb-0">
-                <div className="relative w-full aspect-[3/4] leading-none">
+              <div className="mb-0">
+                <div className="relative w-full aspect-[3/4] leading-none mb-0">
                   <Image
                     src="/measurement-guide-1.png"
                     alt="How to measure chest and length"
@@ -435,7 +435,7 @@ export default function Home() {
                     priority
                   />
                 </div>
-                <div className="relative w-full aspect-[468/854] max-h-[60vh] leading-none">
+                <div className="relative w-full aspect-[468/854] max-h-[60vh] leading-none -mt-8">
                   <Image
                     src="/size-guide.png"
                     alt="Size Guide - Men's and Women's measurements for Chest, Waist, and Sleeve Length"
